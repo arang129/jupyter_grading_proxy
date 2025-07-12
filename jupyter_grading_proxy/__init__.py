@@ -1,11 +1,11 @@
 import os
 
-def setup_notes_proxy():
+def setup_grading_proxy():
     """ Proxy wrapper to launch Streamlit from JupyterHub """
 
     return {
         'command': [
-            "streamlit", "run", "/home/jupyter-data/notes/teaching_notes.py",
+            "streamlit", "run", "/home/jupyter-data/grading/grading.py",
             "--browser.gatherUsageStats", "false",
             "--browser.serverAddress", "0.0.0.0",
             "--server.port", "{port}",
@@ -18,7 +18,7 @@ def setup_notes_proxy():
         'environment': {},
         'timeout': 120.0,  # timeout 由30增加至60秒，防止資源爭搶造成的timeout
         'launcher_entry': {
-            'title': '上課講義',
+            'title': '作業繳交',
             'icon_path': os.path.join(os.path.dirname(os.path.abspath(__file__)), 'icons', 'notes.svg'),
         }
     }
