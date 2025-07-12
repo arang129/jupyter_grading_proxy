@@ -19,6 +19,6 @@ def setup_grading_proxy():
         'timeout': 120.0,  # timeout 由30增加至60秒，防止資源爭搶造成的timeout
         'launcher_entry': {
             'title': '作業繳交',
-            'icon_path': os.path.join(os.path.dirname(os.path.abspath(__file__)), 'icons', 'notes.svg'),
+            'icon_path': os.path.join(os.path.dirname(os.path.abspath(__file__)), 'icons', 'grading.svg'),
         }
     }
